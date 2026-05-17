@@ -196,6 +196,27 @@ npm run dev
 # Open http://localhost:3000
 ```
 
+### ⚠️ Troubleshooting npm install Failures
+
+If you encounter `No matching version found` errors while running `npm install`, it may be caused by the canary package versions used in this project.
+
+Try running:
+
+```bash
+npm install --legacy-peer-deps
+```
+
+or:
+
+```bash
+npm install --force
+```
+
+If the issue still persists, you may temporarily downgrade package versions locally to get the project running on your machine.
+
+> ⚠️ Important:
+> Do not commit modified `package.json` or `package-lock.json` files created during local downgrades. Revert those changes before pushing your PR.
+
 ### Full Stack with Docker
 
 ```bash
@@ -231,6 +252,7 @@ npm run dev
 For detailed setup instructions, see: [ML Setup Guide](./docs/SETUP_ML.md)
 
 Quick start:
+
 ```bash
 cd apps/ml
 python -m venv venv
