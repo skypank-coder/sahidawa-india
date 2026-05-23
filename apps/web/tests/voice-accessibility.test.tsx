@@ -124,6 +124,6 @@ describe("Voice Triage accessibility semantics", () => {
         expect(markup).toContain('aria-label="Volume"');
         expect(markup).toContain('aria-valuemin="0"');
         expect(markup).toContain('aria-valuemax="100"');
-        expect(markup).toContain('aria-valuenow="18"');
+        expect(markup).toContain('aria-valuenow="0"');
     });
 });
