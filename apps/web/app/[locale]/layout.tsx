@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-    themeColor: "#10b981",
+    themeColor: "#16a34a",
 };
 
 export default async function LocaleLayout({
