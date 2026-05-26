@@ -7,8 +7,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from apps.ml.src.image_compare import _load_reference_cache, router as image_compare_router
-from services.telemetry import configure_telemetry_logging
-from services.router_loader import include_router_if_available
+from apps.ml.services.telemetry import configure_telemetry_logging
+from apps.ml.services.router_loader import include_router_if_available
 
 load_dotenv()
 configure_telemetry_logging()
@@ -46,8 +46,8 @@ app.include_router(image_compare_router)
 
 # Include ASR as a required router and OCR as optional so voice triage can boot
 # even when OCR-only dependencies are not installed in the current environment.
-include_router_if_available(app, "routers.asr", required=True)
-ocr_loaded = include_router_if_available(app, "routers.ocr", required=False)
+include_router_if_available(app, "apps.ml.routers.asr", required=True)
+ocr_loaded = include_router_if_available(app, "apps.ml.routers.ocr", required=False)
 if not ocr_loaded:
     logger.warning("OCR routes are disabled in this runtime.")
 
