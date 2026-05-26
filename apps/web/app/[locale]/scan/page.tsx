@@ -106,7 +106,7 @@ function LoadingSkeleton({ ocrStatus, ocrProgress }: { ocrStatus: string; ocrPro
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
             <div className="relative w-full max-w-sm overflow-hidden rounded-[2.5rem] bg-(--color-surface-page) p-8 text-(--color-text-primary) border border-(--color-border-muted) shadow-2xl">
-                <Skeleton className="absolute top-0 right-0 left-0 h-2 rounded-none bg-emerald-500" />
+                <Skeleton className="absolute top-0 end-0 start-0 h-2 rounded-none bg-emerald-500" />
                 <div className="flex flex-col items-center space-y-4 text-center">
                     <Skeleton className="flex h-20 w-20 items-center justify-center rounded-full bg-(--color-surface-muted)">
                         <ShieldCheck size={40} className="text-(--color-text-muted)" />
@@ -163,7 +163,7 @@ function VerifiedSafeResult({
 }) {
     return (
         <div className="relative w-full max-w-sm overflow-hidden rounded-[2.5rem] bg-(--color-surface-page) p-8 text-(--color-text-primary) border border-(--color-border-muted) shadow-2xl">
-            <div className="absolute top-0 right-0 left-0 h-2 bg-emerald-500"></div>
+            <div className="absolute top-0 end-0 start-0 h-2 bg-emerald-500"></div>
             <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-450 shadow-inner">
                     <ShieldCheck size={40} strokeWidth={2.5} />
@@ -222,7 +222,7 @@ function VerifiedSafeResult({
 
                 {(medicine.cdsco_approval_status === "recalled" ||
                     medicine.cdsco_approval_status === "banned") && (
-                    <div className="flex w-full items-start gap-3 rounded-2xl border border-amber-250 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/20 p-4 text-left">
+                    <div className="flex w-full items-start gap-3 rounded-2xl border border-amber-250 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/20 p-4 text-start">
                         <AlertTriangle size={18} className="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
                         <p className="text-xs leading-relaxed font-medium text-amber-800 dark:text-amber-400">
                             This medicine has been <strong>{medicine.cdsco_approval_status}</strong>{" "}
@@ -232,7 +232,7 @@ function VerifiedSafeResult({
                 )}
 
                 {medicine.cdsco_approval_status === "approved" && (
-                    <div className="flex w-full items-start gap-3 rounded-2xl border border-emerald-250 dark:border-emerald-900 bg-emerald-50 dark:bg-emerald-950/20 p-4 text-left">
+                    <div className="flex w-full items-start gap-3 rounded-2xl border border-emerald-250 dark:border-emerald-900 bg-emerald-50 dark:bg-emerald-950/20 p-4 text-start">
                         <Info size={18} className="mt-0.5 shrink-0 text-emerald-600 dark:text-emerald-450" />
                         <p className="text-xs leading-relaxed font-medium text-emerald-800 dark:text-amber-400">
                             This medicine matches the official records. Always check the physical
@@ -262,7 +262,7 @@ function CounterfeitAlertResult({
 }) {
     return (
         <div className="relative w-full max-w-sm overflow-hidden rounded-[2.5rem] bg-(--color-surface-page) p-8 text-(--color-text-primary) border border-(--color-border-muted) shadow-2xl">
-            <div className="absolute top-0 right-0 left-0 h-2 bg-red-500"></div>
+            <div className="absolute top-0 end-0 start-0 h-2 bg-red-500"></div>
             <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-red-100 dark:bg-red-950/30 text-red-600 dark:text-red-400 shadow-inner">
                     <AlertTriangle size={40} strokeWidth={2.5} />
@@ -305,7 +305,7 @@ function CounterfeitAlertResult({
                     </div>
                 </div>
 
-                <div className="flex w-full items-start gap-3 rounded-2xl border border-red-250 dark:border-red-900 bg-red-50 dark:bg-red-950/20 p-4 text-left">
+                <div className="flex w-full items-start gap-3 rounded-2xl border border-red-250 dark:border-red-900 bg-red-50 dark:bg-red-950/20 p-4 text-start">
                     <AlertTriangle size={18} className="mt-0.5 shrink-0 text-red-600 dark:text-red-400" />
                     <p className="text-xs leading-relaxed font-bold text-red-800 dark:text-red-400">
                         WARNING: This medicine has been flagged as counterfeit. Do NOT consume.
@@ -332,7 +332,7 @@ function UnverifiedResult({
 }) {
     return (
         <div className="relative w-full max-w-sm overflow-hidden rounded-[2.5rem] bg-(--color-surface-page) p-8 text-(--color-text-primary) border border-(--color-border-muted) shadow-2xl">
-            <div className="absolute top-0 right-0 left-0 h-2 bg-amber-500"></div>
+            <div className="absolute top-0 end-0 start-0 h-2 bg-amber-500"></div>
             <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-amber-100 dark:bg-amber-950/30 text-amber-600 dark:text-amber-450 shadow-inner">
                     <XCircle size={40} strokeWidth={2.5} />
@@ -358,7 +358,7 @@ function UnverifiedResult({
                     </div>
                 )}
 
-                <div className="flex w-full items-start gap-3 rounded-2xl border border-amber-250 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/20 p-4 text-left">
+                <div className="flex w-full items-start gap-3 rounded-2xl border border-amber-250 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/20 p-4 text-start">
                     <Info size={18} className="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
                     <p className="text-xs leading-relaxed font-medium text-amber-800 dark:text-amber-450">
                         No matching record was found for this medicine batch in the CDSCO database.
@@ -380,7 +380,7 @@ function UnverifiedResult({
 function ErrorResult({ message, onRetry }: { message: string; onRetry: () => void }) {
     return (
         <div className="relative w-full max-w-sm overflow-hidden rounded-[2.5rem] bg-(--color-surface-page) p-8 text-(--color-text-primary) border border-(--color-border-muted) shadow-2xl">
-            <div className="absolute top-0 right-0 left-0 h-2 bg-slate-400"></div>
+            <div className="absolute top-0 end-0 start-0 h-2 bg-slate-400"></div>
             <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-(--color-surface-muted) text-(--color-text-secondary) shadow-inner">
                     <AlertCircle size={40} strokeWidth={2.5} />
@@ -899,13 +899,13 @@ export default function ScanPage() {
                 </div>
 
                 <div className="relative z-10 h-72 w-72 md:h-96 md:w-96">
-                    <div className="absolute top-0 left-0 h-12 w-12 rounded-tl-2xl border-t-4 border-l-4 border-emerald-500"></div>
-                    <div className="absolute top-0 right-0 h-12 w-12 rounded-tr-2xl border-t-4 border-r-4 border-emerald-500"></div>
-                    <div className="absolute bottom-0 left-0 h-12 w-12 rounded-bl-2xl border-b-4 border-l-4 border-emerald-500"></div>
-                    <div className="absolute right-0 bottom-0 h-12 w-12 rounded-br-2xl border-r-4 border-b-4 border-emerald-500"></div>
+                    <div className="absolute top-0 start-0 h-12 w-12 rounded-ss-2xl border-t-4 border-s-4 border-emerald-500"></div>
+                    <div className="absolute top-0 end-0 h-12 w-12 rounded-se-2xl border-t-4 border-e-4 border-emerald-500"></div>
+                    <div className="absolute bottom-0 start-0 h-12 w-12 rounded-es-2xl border-b-4 border-s-4 border-emerald-500"></div>
+                    <div className="absolute end-0 bottom-0 h-12 w-12 rounded-ee-2xl border-e-4 border-b-4 border-emerald-500"></div>
 
                     {isScanning && (
-                        <div className="animate-scan absolute right-4 left-4 z-20 h-[2px] bg-emerald-400 shadow-[0_0_15px_rgba(52,211,153,0.8)]"></div>
+                        <div className="animate-scan absolute end-4 start-4 z-20 h-[2px] bg-emerald-400 shadow-[0_0_15px_rgba(52,211,153,0.8)]"></div>
                     )}
 
                     {!isScanning && !showResult && (
@@ -934,7 +934,7 @@ export default function ScanPage() {
                             <>
                                 <button
                                     onClick={handleDismissResult}
-                                    className="absolute top-4 right-4 z-40 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                                    className="absolute top-4 end-4 z-40 rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
                                 >
                                     <X size={24} />
                                 </button>

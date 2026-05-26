@@ -9,7 +9,9 @@ const languages = [
   { code: "en", label: "English", native: "English" },
   { code: "ta", label: "Tamil", native: "தமிழ்" },
   { code: "bn", label: "Bengali", native: "বাংলা" },
-  { code: "te", label: "Telugu", native: "తెలుగు" }
+  { code: "te", label: "Telugu", native: "తెలుగు" },
+  { code: "ur", label: "Urdu", native: "اردو" },
+  { code: "ks", label: "Kashmiri", native: "کٲشُر" }
 ];
 
 export default function LanguageSwitcher() {
@@ -53,12 +55,12 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-40 bg-(--color-surface-page) border border-(--color-border-muted) rounded-2xl shadow-lg overflow-hidden z-50">
+        <div className="absolute end-0 mt-2 w-40 bg-(--color-surface-page) border border-(--color-border-muted) rounded-2xl shadow-lg overflow-hidden z-50">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => switchLanguage(lang.code)}
-              className={`w-full text-left px-3 py-1.5 text-sm font-semibold transition-colors hover:bg-emerald-50 dark:hover:bg-emerald-950/20 hover:text-emerald-700 dark:hover:text-emerald-450 flex items-center justify-between sm:px-4 sm:py-2
+              className={`w-full text-start px-3 py-1.5 text-sm font-semibold transition-colors hover:bg-emerald-50 dark:hover:bg-emerald-950/20 hover:text-emerald-700 dark:hover:text-emerald-450 flex items-center justify-between sm:px-4 sm:py-2
                 ${locale === lang.code ? "bg-emerald-50 dark:bg-emerald-950/20 text-emerald-700 dark:text-emerald-450" : "text-(--color-text-primary)"}`}
             >
               <span>{lang.native}</span>

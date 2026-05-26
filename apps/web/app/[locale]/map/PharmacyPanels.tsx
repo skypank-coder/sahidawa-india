@@ -45,7 +45,7 @@ function PharmacyPanelRow({
                 type="button"
                 onClick={onSelect}
                 aria-pressed={isSelected}
-                className="w-full text-left"
+                className="w-full text-start"
             >
                 <div className="flex items-start gap-2.5">
                     <div
@@ -93,7 +93,7 @@ function PharmacyPanelRow({
                     </div>
                 </div>
 
-                <div className="mt-2 ml-11 flex flex-wrap items-center gap-2">
+                <div className="mt-2 ms-11 flex flex-wrap items-center gap-2">
                     <span
                         className={`inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] font-medium ${
                             pharmacy.distance !== "—"
@@ -105,7 +105,7 @@ function PharmacyPanelRow({
                     </span>
                 </div>
 
-                <div className="mt-1.5 ml-11 flex flex-wrap gap-1">
+                <div className="mt-1.5 ms-11 flex flex-wrap gap-1">
                     <span className="inline-flex items-center gap-0.5 rounded-full bg-(--color-surface-muted) px-1.5 py-0.5 text-[9px] font-medium text-(--color-text-secondary)">
                         <Shield size={6} />
                         {pharmacy.status}
@@ -124,7 +124,7 @@ function PharmacyPanelRow({
             </button>
 
             {pharmacy.phone && (
-                <div className="mt-2 ml-11">
+                <div className="mt-2 ms-11">
                     <a
                         href={`tel:${pharmacy.phone}`}
                         className="inline-flex items-center gap-1.5 rounded-lg bg-(--color-surface-muted) px-2.5 py-1 text-[11px] font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-border-muted) active:bg-(--color-border-muted)"
@@ -185,7 +185,7 @@ export default function PharmacyPanels({
                             type="button"
                             onClick={() => onHeatmapModeChange(option.id)}
                             title={option.description}
-                            className={`rounded-xl px-3 py-2 text-left text-[11px] font-bold transition-all ${
+                            className={`rounded-xl px-3 py-2 text-start text-[11px] font-bold transition-all ${
                                 heatmapMode === option.id
                                     ? "bg-slate-900 dark:bg-slate-100 dark:text-slate-900 text-white shadow-md"
                                     : "bg-(--color-surface-muted) text-(--color-text-secondary) hover:bg-(--color-border-muted)"
@@ -226,7 +226,7 @@ export default function PharmacyPanels({
                                         <Skeleton className="h-3 w-3/4" />
                                     </div>
                                 </div>
-                                <div className="mt-2 ml-11 flex flex-wrap items-center gap-2">
+                                <div className="mt-2 ms-11 flex flex-wrap items-center gap-2">
                                     <Skeleton className="h-4 w-16 rounded-full" />
                                 </div>
                             </div>

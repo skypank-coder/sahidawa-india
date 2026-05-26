@@ -8,15 +8,15 @@ type ChatbotPanelOptions = {
 };
 
 const POSITION_BASE_CLASSES = "fixed z-50 font-sans";
-const DEFAULT_CHATBOT_POSITION_CLASSES = `${POSITION_BASE_CLASSES} bottom-20 md:bottom-6 right-6`;
-const MAP_CHATBOT_DESKTOP_LEFT = "md:left-[calc(clamp(22rem,26vw,30rem)+2.75rem)]";
-const MAP_CHATBOT_CLOSED_POSITION_CLASSES = `${POSITION_BASE_CLASSES} bottom-20 md:bottom-6 left-4 ${MAP_CHATBOT_DESKTOP_LEFT}`;
-const MAP_CHATBOT_OPEN_POSITION_CLASSES = `${POSITION_BASE_CLASSES} bottom-24 md:bottom-6 left-4 ${MAP_CHATBOT_DESKTOP_LEFT}`;
+const DEFAULT_CHATBOT_POSITION_CLASSES = `${POSITION_BASE_CLASSES} bottom-20 md:bottom-6 end-6`;
+const MAP_CHATBOT_DESKTOP_LEFT = "md:start-[calc(clamp(22rem,26vw,30rem)+2.75rem)]";
+const MAP_CHATBOT_CLOSED_POSITION_CLASSES = `${POSITION_BASE_CLASSES} bottom-20 md:bottom-6 start-4 ${MAP_CHATBOT_DESKTOP_LEFT}`;
+const MAP_CHATBOT_OPEN_POSITION_CLASSES = `${POSITION_BASE_CLASSES} bottom-24 md:bottom-6 start-4 ${MAP_CHATBOT_DESKTOP_LEFT}`;
 
 const PANEL_BASE_CLASSES =
     "absolute bottom-16 w-[350px] bg-(--color-surface-page) rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-(--color-border-muted) text-(--color-text-primary) transition-all duration-300";
-const DEFAULT_CHATBOT_PANEL_CLASSES = `${PANEL_BASE_CLASSES} right-0 h-[450px]`;
-const MAP_CHATBOT_PANEL_CLASSES = `${PANEL_BASE_CLASSES} left-0 max-w-[calc(100vw-2rem)] h-[min(28rem,calc(100vh-8rem))] md:h-[450px]`;
+const DEFAULT_CHATBOT_PANEL_CLASSES = `${PANEL_BASE_CLASSES} end-0 h-[450px]`;
+const MAP_CHATBOT_PANEL_CLASSES = `${PANEL_BASE_CLASSES} start-0 max-w-[calc(100vw-2rem)] h-[min(28rem,calc(100vh-8rem))] md:h-[450px]`;
 
 function getPathSegments(pathname: string | null): string[] {
     if (!pathname) {

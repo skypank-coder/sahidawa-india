@@ -2,7 +2,7 @@ export function MedicineResultSkeleton() {
   return (
     <div className="absolute inset-0 z-30 flex items-center justify-center p-6 bg-black/60 backdrop-blur-sm">
       <div className="bg-white text-slate-900 w-full max-w-sm rounded-[2.5rem] p-8 shadow-2xl relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-2 bg-emerald-500 animate-pulse"></div>
+        <div className="absolute top-0 start-0 end-0 h-2 bg-emerald-500 animate-pulse"></div>
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="w-20 h-20 rounded-full bg-gray-200 animate-pulse"></div>
           <div className="space-y-2 w-full">

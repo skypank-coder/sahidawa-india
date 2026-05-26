@@ -40,7 +40,7 @@ export default function SearchSuggestions({
       role="listbox"
       aria-label="Search suggestions"
       className="
-        absolute left-0 right-0 top-full z-50
+        absolute start-0 end-0 top-full z-50
         mt-2 overflow-hidden rounded-2xl
         border border-slate-200 bg-white
         shadow-xl shadow-slate-200/60

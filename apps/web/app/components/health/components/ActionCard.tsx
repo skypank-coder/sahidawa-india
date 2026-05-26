@@ -45,7 +45,7 @@ export function ActionCard({
     return (
         <button
             onClick={onClick}
-            className={`w-full rounded-2xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-all duration-200 active:scale-[0.98] ${accent.hover} focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none`}
+            className={`w-full rounded-2xl border border-slate-200 bg-white p-4 text-start shadow-sm transition-all duration-200 active:scale-[0.98] ${accent.hover} focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none`}
             aria-label={label}
         >
             <div className="flex items-start gap-3">
@@ -72,7 +72,7 @@ export function ActionCard({
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="mt-1 ml-auto flex-shrink-0"
+                    className="mt-1 ms-auto flex-shrink-0 rtl:rotate-180"
                     aria-hidden="true"
                 >
                     <polyline points="9 18 15 12 9 6" />

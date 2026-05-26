@@ -224,7 +224,7 @@ export default function SearchBar() {
       <div className="flex items-center gap-2 px-2 sm:gap-4">
         {/* Search icon — shows a subtle spinner while fetching */}
         <Search
-          className={`ml-2 shrink-0 transition-colors ${
+          className={`ms-2 shrink-0 transition-colors ${
             isLoading ? "text-emerald-400 animate-pulse" : "text-slate-400"
           }`}
           size={24}

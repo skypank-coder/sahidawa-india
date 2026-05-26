@@ -84,7 +84,7 @@ export default function MedicineSearchSelect({
       ) : (
         <div className="relative">
           <Search
-            className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-slate-400"
+            className="pointer-events-none absolute top-1/2 start-3 -translate-y-1/2 text-slate-400"
             size={16}
           />
           <input
@@ -96,7 +96,7 @@ export default function MedicineSearchSelect({
             }}
             onFocus={() => setOpen(true)}
             placeholder={placeholder}
-            className="w-full rounded-lg border border-slate-300 bg-white py-2 pl-9 pr-3 text-sm outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600"
+            className="w-full rounded-lg border border-slate-300 bg-white py-2 ps-9 pe-3 text-sm outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600"
             aria-expanded={open}
             aria-controls={listId}
             autoComplete="off"
@@ -129,7 +129,7 @@ export default function MedicineSearchSelect({
               <li key={m.id} role="option">
                 <button
                   type="button"
-                  className="w-full px-3 py-2 text-left text-sm hover:bg-slate-50"
+                  className="w-full px-3 py-2 text-start text-sm hover:bg-slate-50"
                   onClick={() => {
                     onChange(m);
                     setQuery("");

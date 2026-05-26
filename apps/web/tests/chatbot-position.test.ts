@@ -25,9 +25,9 @@ describe("getChatbotPositionClasses", () => {
             isOpen: false,
         });
 
-        expect(classes).toContain("right-6");
-        expect(classes).not.toContain("left-4");
-        expect(classes).not.toContain("md:left-6");
+        expect(classes).toContain("end-6");
+        expect(classes).not.toContain("start-4");
+        expect(classes).not.toContain("md:start-6");
     });
 
     it("moves the launcher to the left for map routes", () => {
@@ -36,10 +36,10 @@ describe("getChatbotPositionClasses", () => {
             isOpen: false,
         });
 
-        expect(classes).toContain("left-4");
-        expect(classes).toContain("md:left-[calc(clamp(22rem,26vw,30rem)+2.75rem)]");
-        expect(classes).not.toContain("md:left-6");
-        expect(classes).not.toContain("right-6");
+        expect(classes).toContain("start-4");
+        expect(classes).toContain("md:start-[calc(clamp(22rem,26vw,30rem)+2.75rem)]");
+        expect(classes).not.toContain("md:start-6");
+        expect(classes).not.toContain("end-6");
     });
 
     it("uses an elevated mobile offset when the map-route chatbot is open", () => {
@@ -50,7 +50,7 @@ describe("getChatbotPositionClasses", () => {
 
         expect(classes).toContain("bottom-24");
         expect(classes).toContain("md:bottom-6");
-        expect(classes).toContain("md:left-[calc(clamp(22rem,26vw,30rem)+2.75rem)]");
+        expect(classes).toContain("md:start-[calc(clamp(22rem,26vw,30rem)+2.75rem)]");
     });
 });
 
@@ -60,8 +60,8 @@ describe("getChatbotPanelClasses", () => {
             pathname: "/en/health",
         });
 
-        expect(classes).toContain("right-0");
-        expect(classes).not.toContain("left-0");
+        expect(classes).toContain("end-0");
+        expect(classes).not.toContain("start-0");
         expect(classes).toContain("h-[450px]");
     });
 
@@ -71,8 +71,8 @@ describe("getChatbotPanelClasses", () => {
         });
         const classTokens = classes.split(" ");
 
-        expect(classes).toContain("left-0");
-        expect(classes).not.toContain("right-0");
+        expect(classes).toContain("start-0");
+        expect(classes).not.toContain("end-0");
         expect(classes).toContain("max-w-[calc(100vw-2rem)]");
         expect(classes).toContain("h-[min(28rem,calc(100vh-8rem))]");
         expect(classes).toContain("md:h-[450px]");

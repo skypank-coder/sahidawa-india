@@ -42,6 +42,8 @@ export const viewport: Viewport = {
     themeColor: "#10b981",
 };
 
+const RTL_LOCALES = ['ur', 'ks']; // Urdu, Kashmiri
+
 export default async function LocaleLayout({
     children,
     params,
@@ -57,8 +59,10 @@ export default async function LocaleLayout({
 
     const messages = await getMessages();
 
+    const dir = RTL_LOCALES.includes(locale) ? 'rtl' : 'ltr';
+
     return (
-        <html lang={locale} suppressHydrationWarning>
+        <html lang={locale} dir={dir} suppressHydrationWarning>
             {/* REPLACE YOUR OLD BODY TAG WITH THIS ONE: */}
             <body className="bg-(--color-surface-page) text-(--color-text-primary) transition-colors duration-300">
                 <ServiceWorkerProvider>

@@ -146,12 +146,12 @@ export default function AdminDashboard() {
             setReports((prev) => prev.filter((r) => r.id !== reportId));
             notify(
                 status === "verified_fake"
-                    ? <><AlertTriangle className="inline h-4 w-4 mr-1" /> Marked as Verified Fake</>
-                    : <><CheckCircle className="inline h-4 w-4 mr-1" /> Marked as False Alarm</>,
+                    ? <><AlertTriangle className="inline h-4 w-4 me-1" /> Marked as Verified Fake</>
+                    : <><CheckCircle className="inline h-4 w-4 me-1" /> Marked as False Alarm</>,
                 status !== "verified_fake"
             );
         } catch {
-            notify(<><XCircle className="inline h-4 w-4 mr-1" /> Failed to update report</>, false);
+            notify(<><XCircle className="inline h-4 w-4 me-1" /> Failed to update report</>, false);
         } finally {
             setActing(null);
         }
@@ -176,9 +176,9 @@ export default function AdminDashboard() {
                 cdsco_approval_status: "approved",
             });
             setShowForm(false);
-            notify(<><CheckCircle className="inline h-4 w-4 mr-1" /> Medicine added</>);
+            notify(<><CheckCircle className="inline h-4 w-4 me-1" /> Medicine added</>);
         } catch {
-            notify(<><XCircle className="inline h-4 w-4 mr-1" /> Failed to add medicine</>, false);
+            notify(<><XCircle className="inline h-4 w-4 me-1" /> Failed to add medicine</>, false);
         }
     };
 
@@ -189,7 +189,7 @@ export default function AdminDashboard() {
     return (
         <div className="flex min-h-screen bg-slate-50 font-sans">
             {/* Sidebar */}
-            <aside className="flex w-60 shrink-0 flex-col gap-6 border-r border-slate-200 bg-white p-5">
+            <aside className="flex w-60 shrink-0 flex-col gap-6 border-e border-slate-200 bg-white p-5">
                 <div className="flex items-center gap-2 px-1">
                     <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-xs font-bold text-white">
                         S
@@ -239,11 +239,11 @@ export default function AdminDashboard() {
                             Sign In
                         </Link>
                         <div className="relative">
-                            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                            <Search className="absolute top-1/2 start-3 h-4 w-4 -translate-y-1/2 text-slate-400" />
                             <input
                                 type="text"
                                 placeholder="Search..."
-                                className="w-56 rounded-full border border-slate-200 bg-slate-50 py-2 pr-4 pl-9 text-sm focus:ring-2 focus:ring-blue-500/20 focus:outline-none"
+                                className="w-56 rounded-full border border-slate-200 bg-slate-50 py-2 pe-4 ps-9 text-sm focus:ring-2 focus:ring-blue-500/20 focus:outline-none"
                             />
                         </div>
                         <button
@@ -368,7 +368,7 @@ export default function AdminDashboard() {
                                 </div>
                             )}
 
-                            <table className="w-full text-left">
+                            <table className="w-full text-start">
                                 <thead>
                                     <tr className="bg-slate-50 text-xs font-semibold tracking-wider text-slate-400 uppercase">
                                         <th className="px-6 py-3">Brand</th>
@@ -485,7 +485,7 @@ export default function AdminDashboard() {
             {toast && (
                 <LiveMessage
                     tone={toast.ok ? "polite" : "critical"}
-                    className={`fixed right-6 bottom-6 z-50 rounded-2xl px-5 py-3 text-sm font-medium text-white shadow-xl ${toast.ok ? "bg-green-600" : "bg-red-600"}`}
+                    className={`fixed end-6 bottom-6 z-50 rounded-2xl px-5 py-3 text-sm font-medium text-white shadow-xl ${toast.ok ? "bg-green-600" : "bg-red-600"}`}
                 >
                     {toast.msg}
                 </LiveMessage>
@@ -503,7 +503,7 @@ function NavItem({
     return (
         <button
             onClick={onClick}
-            className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium transition-all ${active ? "bg-blue-50 text-blue-600" : "text-slate-500 hover:bg-slate-50 hover:text-slate-800"}`}
+            className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-start text-sm font-medium transition-all ${active ? "bg-blue-50 text-blue-600" : "text-slate-500 hover:bg-slate-50 hover:text-slate-800"}`}
         >
             <Icon className={`h-4 w-4 ${active ? "text-blue-600" : "text-slate-400"}`} />
             {label}
@@ -598,7 +598,7 @@ function ReportsTable({
             )}
 
             {!loading && !authError && reports.length > 0 && (
-                <table className="w-full text-left">
+                <table className="w-full text-start">
                     <thead>
                         <tr className="bg-slate-50 text-xs font-semibold tracking-wider text-slate-400 uppercase">
                             <th className="px-6 py-3">Medicine</th>
@@ -663,7 +663,7 @@ function ResolvedTable({
                 <h2 className="font-semibold text-slate-800">Resolved</h2>
                 <span className="text-xs text-slate-400">{resolved.length} resolved</span>
             </div>
-            <table className="w-full text-left">
+            <table className="w-full text-start">
                 <thead>
                     <tr className="bg-slate-50 text-xs font-semibold tracking-wider text-slate-400 uppercase">
                         <th className="px-6 py-3">Medicine</th>

@@ -3,7 +3,7 @@ export default function ScanLoading() {
     <div className="min-h-screen bg-black text-white font-sans relative flex flex-col">
 
       {/* Header Skeleton */}
-      <div className="flex items-center gap-4 px-4 py-3 bg-transparent absolute top-0 left-0 right-0 z-20">
+      <div className="flex items-center gap-4 px-4 py-3 bg-transparent absolute top-0 start-0 end-0 z-20">
         <div className="w-12 h-12 rounded-2xl bg-white/10 animate-pulse shrink-0" />
 
         <div className="space-y-2">
@@ -23,13 +23,13 @@ export default function ScanLoading() {
 
         {/* Scanner Frame */}
         <div className="relative w-72 h-72 md:w-96 md:h-96 z-10">
-          <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-emerald-500 rounded-tl-2xl" />
+          <div className="absolute top-0 start-0 w-12 h-12 border-t-4 border-s-4 border-emerald-500 rounded-ss-2xl" />
 
-          <div className="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-emerald-500 rounded-tr-2xl" />
+          <div className="absolute top-0 end-0 w-12 h-12 border-t-4 border-e-4 border-emerald-500 rounded-se-2xl" />
 
-          <div className="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-emerald-500 rounded-bl-2xl" />
+          <div className="absolute bottom-0 start-0 w-12 h-12 border-b-4 border-s-4 border-emerald-500 rounded-es-2xl" />
 
-          <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-emerald-500 rounded-br-2xl" />
+          <div className="absolute bottom-0 end-0 w-12 h-12 border-b-4 border-e-4 border-emerald-500 rounded-ee-2xl" />
 
           {/* Spinner */}
           <div className="absolute inset-0 flex items-center justify-center">

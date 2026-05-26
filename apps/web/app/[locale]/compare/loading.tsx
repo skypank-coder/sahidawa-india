@@ -8,7 +8,7 @@ export default function CompareLoading() {
                     <div className="h-5 w-52 animate-pulse rounded-xl bg-slate-200" />
                 </div>
                 {/* Back arrow */}
-                <div className="absolute top-1/2 left-5 h-8 w-8 -translate-y-1/2 animate-pulse rounded-lg bg-slate-200" />
+                <div className="absolute top-1/2 start-5 h-8 w-8 -translate-y-1/2 animate-pulse rounded-lg bg-slate-200" />
             </div>
 
             <main className="container mx-auto max-w-4xl space-y-6 px-4 py-8">

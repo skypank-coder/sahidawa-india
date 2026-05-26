@@ -78,7 +78,7 @@ export default function FAQPage() {
                         >
                             <button
                                 onClick={() => toggle(i)}
-                                className="w-full flex items-center justify-between px-6 py-5 text-left"
+                                className="w-full flex items-center justify-between px-6 py-5 text-start"
                             >
                                 <div className="flex items-center gap-3">
                                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
@@ -86,7 +86,7 @@ export default function FAQPage() {
                                     </div>
                                     <span className="font-bold text-(--color-text-primary)">{faq.question}</span>
                                 </div>
-                                <div className="shrink-0 ml-4 text-(--color-text-muted)">
+                                <div className="shrink-0 ms-4 text-(--color-text-muted)">
                                     {openIndex === i ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                                 </div>
                             </button>

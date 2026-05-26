@@ -119,7 +119,7 @@ export default function Footer() {
                         <ThemeToggle />
                     </div>
 
-                    <p className="text-center md:text-right">
+                    <p className="text-center md:text-end">
                         Built with <Heart className="inline h-3 w-3 text-red-500" /> for the open-source community.
                     </p>
                 </div>

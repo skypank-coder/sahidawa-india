@@ -342,7 +342,7 @@ export function BarcodeScanner({ onScan, debounceMs = 2000 }: BarcodeScannerProp
                 muted
             />
             {status === "scanning" && (
-                <div className="absolute right-3 bottom-3 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 backdrop-blur-sm">
+                <div className="absolute end-3 bottom-3 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 backdrop-blur-sm">
                     <Camera size={14} className="text-emerald-400" />
                     <span className="text-xs font-medium text-emerald-400">Scanning</span>
                 </div>
@@ -351,7 +351,7 @@ export function BarcodeScanner({ onScan, debounceMs = 2000 }: BarcodeScannerProp
                 <button
                     onClick={toggleTorch}
                     type="button"
-                    className="absolute top-4 right-4 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-black/80 active:scale-95"
+                    className="absolute top-4 end-4 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-black/80 active:scale-95"
                     title={torchOn ? "Turn off flashlight" : "Turn on flashlight"}
                     aria-label={torchOn ? "Turn off flashlight" : "Turn on flashlight"}
                 >

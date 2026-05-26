@@ -22,8 +22,8 @@ export default function ReportPage() {
       <main className="container mx-auto px-4 md:px-6 pt-8 pb-20 flex-1 relative z-10">
         
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/40 dark:bg-emerald-950/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-teal-100/40 dark:bg-teal-950/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
+        <div className="absolute top-0 end-0 w-96 h-96 bg-emerald-100/40 dark:bg-emerald-950/10 rounded-full blur-3xl -me-20 -mt-20 pointer-events-none"></div>
+        <div className="absolute bottom-0 start-0 w-80 h-80 bg-teal-100/40 dark:bg-teal-950/10 rounded-full blur-3xl -ms-20 -mb-20 pointer-events-none"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10">
           

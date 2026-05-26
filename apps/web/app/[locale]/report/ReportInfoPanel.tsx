@@ -29,15 +29,15 @@ export default function ReportInfoPanel() {
             placeholder="Enter batch number..."
             className="w-full bg-(--color-surface-muted) border border-(--color-border-muted) text-(--color-text-primary) placeholder-(--color-text-muted) rounded-2xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
           />
-          <button className="absolute right-2 top-2 bottom-2 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200 px-3 rounded-xl hover:bg-slate-800 transition-colors flex items-center justify-center">
-            <ChevronRight size={16} />
+          <button className="absolute end-2 top-2 bottom-2 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200 px-3 rounded-xl hover:bg-slate-800 transition-colors flex items-center justify-center">
+            <ChevronRight size={16} className="rtl:rotate-180" />
           </button>
         </div>
       </div>
 
       {/* Trust & Safety Card */}
       <div className="bg-(--color-surface-page) rounded-[2rem] p-8 shadow-sm border border-(--color-border-muted) overflow-hidden relative">
-        <div className="absolute top-0 left-0 right-0 h-2 bg-emerald-500"></div>
+        <div className="absolute top-0 start-0 end-0 h-2 bg-emerald-500"></div>
 
         <div className="flex items-center gap-3 mb-8">
           <ShieldCheck className="text-emerald-500" size={28} strokeWidth={2.5} />

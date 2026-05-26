@@ -186,7 +186,7 @@ export default function AboutPage() {
             <section className="container mx-auto max-w-6xl px-4 pb-16">
                 <div className="relative overflow-hidden rounded-3xl bg-emerald-600 p-8 text-center text-white md:p-12">
                     <div className="absolute inset-0 z-0 bg-gradient-to-tr from-emerald-700 to-emerald-500" />
-                    <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
+                    <div className="absolute -top-10 -end-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
                     <div className="relative z-10 space-y-4">
                         <div className="flex justify-center">
                             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-md">
@@ -201,7 +201,7 @@ export default function AboutPage() {
                         <div className="pt-2">
                             <Link href="/contact">
                                 <button className="inline-flex items-center gap-2 rounded-2xl bg-white dark:bg-slate-900 px-8 py-3.5 text-base font-bold text-emerald-600 dark:text-emerald-400 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
-                                    Contact Us <ChevronRight size={18} />
+                                    Contact Us <ChevronRight size={18} className="rtl:rotate-180" />
                                 </button>
                             </Link>
                         </div>

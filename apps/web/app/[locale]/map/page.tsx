@@ -188,7 +188,7 @@ function BottomDrawer({
             <button
                 onClick={expandDrawer}
                 data-testid="mobile-pharmacy-pill"
-                className="pointer-events-auto absolute right-4 bottom-5 z-1000 flex items-center gap-2 rounded-full bg-slate-900 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200 px-4 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:bg-slate-800 active:scale-95 md:hidden"
+                className="pointer-events-auto absolute end-4 bottom-5 z-1000 flex items-center gap-2 rounded-full bg-slate-900 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200 px-4 py-2.5 text-xs font-bold text-white shadow-xl transition-all hover:bg-slate-800 active:scale-95 md:hidden"
                 aria-label={`Show nearby pharmacies list with ${count} results`}
             >
                 <ChevronUp size={14} />
@@ -200,7 +200,7 @@ function BottomDrawer({
     return (
         <div
             data-testid="mobile-pharmacy-drawer"
-            className="pointer-events-none absolute right-4 bottom-4 left-20 z-1000 md:hidden"
+            className="pointer-events-none absolute end-4 bottom-4 start-20 z-1000 md:hidden"
         >
             <div className="pointer-events-auto max-h-[68vh] rounded-[30px] border border-(--color-border-muted) bg-(--color-surface-page)/85 p-2 shadow-2xl backdrop-blur-xl">
                 <div className="flex max-h-[calc(68vh-1rem)] flex-col overflow-hidden">
@@ -564,7 +564,7 @@ export default function PharmacyMapPage() {
                             {"icon" in f && f.icon}
                             {f.label}
                             {f.id === "more" && activeAdvancedFilterCount > 0 && (
-                                <span className="ml-0.5 rounded-full bg-(--color-text-primary) px-1.5 py-0.5 text-[9px] text-(--color-surface-page)">
+                                <span className="ms-0.5 rounded-full bg-(--color-text-primary) px-1.5 py-0.5 text-[9px] text-(--color-surface-page)">
                                     {activeAdvancedFilterCount}
                                 </span>
                             )}
@@ -573,7 +573,7 @@ export default function PharmacyMapPage() {
                 </div>
 
                 {showFilterPanel && (
-                    <div className="absolute top-[calc(100%-0.5rem)] right-4 left-4 z-30 rounded-2xl border border-(--color-border-muted) bg-(--color-surface-page) p-3 shadow-xl md:right-auto md:w-80">
+                    <div className="absolute top-[calc(100%-0.5rem)] end-4 start-4 z-30 rounded-2xl border border-(--color-border-muted) bg-(--color-surface-page) p-3 shadow-xl md:end-auto md:w-80">
                         <div className="mb-2 flex items-center justify-between">
                             <p className="text-xs font-bold text-(--color-text-primary)">Filters</p>
                             <button
@@ -672,7 +672,7 @@ export default function PharmacyMapPage() {
                         />
 
                         {showSearchArea && !isLoading && (
-                            <div className="absolute top-4 left-1/2 z-1000 -translate-x-1/2">
+                            <div className="absolute top-4 start-1/2 z-1000 -translate-x-1/2">
                                 <button
                                     onClick={handleSearchThisArea}
                                     className="flex items-center gap-2 rounded-full border border-(--color-border-muted) bg-(--color-surface-page) px-5 py-2.5 text-xs font-bold text-(--color-text-primary) shadow-xl transition-all hover:bg-(--color-surface-muted) hover:shadow-2xl active:scale-95"
@@ -684,7 +684,7 @@ export default function PharmacyMapPage() {
                         )}
 
                         {isLoading && (
-                            <div className="absolute top-4 left-1/2 z-1000 -translate-x-1/2">
+                            <div className="absolute top-4 start-1/2 z-1000 -translate-x-1/2">
                                 <div className="flex items-center gap-2 rounded-full border border-(--color-border-muted) bg-(--color-surface-page) px-5 py-2.5 text-xs font-bold text-(--color-text-secondary) shadow-xl">
                                     <Loader2 size={13} className="animate-spin text-emerald-600" />
                                     Fetching pharmacies…
@@ -692,7 +692,7 @@ export default function PharmacyMapPage() {
                             </div>
                         )}
 
-                        <div className="absolute top-4 right-4 z-1000 flex flex-col gap-2">
+                        <div className="absolute top-4 end-4 z-1000 flex flex-col gap-2">
                             <button
                                 data-testid="mobile-pharmacy-list-toggle"
                                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-(--color-border-muted) bg-(--color-surface-page) text-(--color-text-secondary) shadow-lg transition-all hover:text-(--color-text-primary) hover:shadow-xl md:hidden"
@@ -720,7 +720,7 @@ export default function PharmacyMapPage() {
                         </div>
 
                         {(locationError || fetchError) && (
-                            <div className="animate-in slide-in-from-top-2 absolute top-4 right-16 left-4 z-1000 rounded-2xl border border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-950/20 px-4 py-3 text-xs font-semibold text-red-700 dark:text-red-400 shadow-lg duration-300">
+                            <div className="animate-in slide-in-from-top-2 absolute top-4 end-16 start-4 z-1000 rounded-2xl border border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-950/20 px-4 py-3 text-xs font-semibold text-red-700 dark:text-red-400 shadow-lg duration-300">
                                 {locationError || fetchError}
                             </div>
                         )}

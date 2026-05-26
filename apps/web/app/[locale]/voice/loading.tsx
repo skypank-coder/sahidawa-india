@@ -2,8 +2,8 @@ export default function VoiceLoading() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col relative overflow-hidden">
       {/* Decorative blobs — matches real page */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl -mr-20 -mt-20" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl -ml-20 -mb-20" />
+      <div className="absolute top-0 end-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl -me-20 -mt-20" />
+      <div className="absolute bottom-0 start-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl -ms-20 -mb-20" />
 
       {/* Header skeleton */}
       <div className="flex items-center gap-4 px-6 pt-14 pb-4 relative z-10">

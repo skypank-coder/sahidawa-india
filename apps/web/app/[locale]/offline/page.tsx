@@ -86,8 +86,8 @@ export default function OfflinePage() {
     return (
         <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-6">
             {/* Background glow blobs */}
-            <div className="pointer-events-none absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-amber-500/5 blur-3xl" />
-            <div className="pointer-events-none absolute right-1/4 bottom-1/4 h-80 w-80 rounded-full bg-emerald-500/5 blur-3xl" />
+            <div className="pointer-events-none absolute top-1/4 start-1/4 h-64 w-64 rounded-full bg-amber-500/5 blur-3xl" />
+            <div className="pointer-events-none absolute end-1/4 bottom-1/4 h-80 w-80 rounded-full bg-emerald-500/5 blur-3xl" />
 
             <div className="relative w-full max-w-lg text-center">
                 {/* Icon */}
@@ -108,7 +108,7 @@ export default function OfflinePage() {
                 <p className="mb-10 text-sm leading-relaxed text-slate-500">
                     Please check your Wi-Fi or mobile data and try again.
                     {retryCount > 0 && (
-                        <span className="ml-1 text-amber-400">(Attempt {retryCount})</span>
+                        <span className="ms-1 text-amber-400">(Attempt {retryCount})</span>
                     )}
                 </p>
 

@@ -178,11 +178,11 @@ export default function SahiDawaHome() {
                 {/* ── Primary CTA — Full-width Scan Button ── */}
                 <button
                     onClick={() => handleNavigation("scan")}
-                    className="group relative flex w-full items-center justify-between overflow-hidden rounded-3xl border border-emerald-500 bg-emerald-600 p-7 text-left text-white shadow-xl shadow-emerald-600/20 transition-all hover:shadow-emerald-600/40 active:scale-[0.99] md:p-8"
+                    className="group relative flex w-full items-center justify-between overflow-hidden rounded-3xl border border-emerald-500 bg-emerald-600 p-7 text-start text-white shadow-xl shadow-emerald-600/20 transition-all hover:shadow-emerald-600/40 active:scale-[0.99] md:p-8"
                     aria-label="Scan medicine"
                 >
                     <div className="absolute inset-0 z-0 bg-linear-to-tr from-emerald-700 to-emerald-500"></div>
-                    <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-white/10 blur-3xl"></div>
+                    <div className="absolute -top-10 -end-10 h-40 w-40 rounded-full bg-white/10 blur-3xl"></div>
                     <div className="relative z-10 flex items-center gap-6">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/20 shadow-inner backdrop-blur-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 md:h-20 md:w-20">
                             <Camera
@@ -201,7 +201,7 @@ export default function SahiDawaHome() {
                     </div>
                     <ChevronRight
                         size={32}
-                        className="relative z-10 hidden shrink-0 text-emerald-200 opacity-50 transition-all group-hover:translate-x-2 group-hover:opacity-100 sm:block"
+                        className="relative z-10 hidden shrink-0 text-emerald-200 opacity-50 transition-all group-hover:translate-x-2 group-hover:opacity-100 sm:block rtl:rotate-180"
                     />
                 </button>
 
@@ -210,14 +210,14 @@ export default function SahiDawaHome() {
                     {/* Upload Photo */}
                     <button
                         onClick={() => handleNavigation("scan")}
-                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-left shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-xl active:scale-[0.99]"
+                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-start shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-xl active:scale-[0.99]"
                         aria-label="Upload photo"
                     >
                         <div className="flex items-start justify-between gap-4">
                             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 ring-1 ring-white/60 transition-colors duration-300 ring-inset group-hover:bg-emerald-500 group-hover:text-white dark:bg-emerald-950/30 dark:text-emerald-400 dark:ring-white/10">
                                 <Camera size={28} strokeWidth={2.5} />
                             </div>
-                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-emerald-400" />
+                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-emerald-400 rtl:rotate-180" />
                         </div>
 
                         <div className="pt-4">
@@ -233,14 +233,14 @@ export default function SahiDawaHome() {
                     {/* Voice Triage */}
                     <button
                         onClick={() => handleNavigation("voice")}
-                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-left shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-xl active:scale-[0.99]"
+                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-start shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-xl active:scale-[0.99]"
                         aria-label="Voice triage"
                     >
                         <div className="flex items-start justify-between gap-4">
                             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 ring-1 ring-white/60 transition-colors duration-300 ring-inset group-hover:bg-blue-500 group-hover:text-white dark:bg-blue-950/30 dark:text-blue-400 dark:ring-white/10">
                                 <Mic size={28} strokeWidth={2.5} />
                             </div>
-                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-400" />
+                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-400 rtl:rotate-180" />
                         </div>
 
                         <div className="pt-4">
@@ -256,14 +256,14 @@ export default function SahiDawaHome() {
                     {/* Pharmacy Map */}
                     <button
                         onClick={() => handleNavigation("map")}
-                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-left shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 hover:shadow-xl active:scale-[0.99]"
+                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-start shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 hover:shadow-xl active:scale-[0.99]"
                         aria-label="Pharmacy map"
                     >
                         <div className="flex items-start justify-between gap-4">
                             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 ring-1 ring-white/60 transition-colors duration-300 ring-inset group-hover:bg-amber-500 group-hover:text-white dark:bg-amber-950/30 dark:text-amber-400 dark:ring-white/10">
                                 <MapPin size={28} strokeWidth={2.5} />
                             </div>
-                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400" />
+                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-amber-400 rtl:rotate-180" />
                         </div>
 
                         <div className="pt-4">
@@ -279,14 +279,14 @@ export default function SahiDawaHome() {
                     {/* Report Fake Medicine */}
                     <button
                         onClick={() => handleNavigation("report")}
-                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-left shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-400/50 hover:shadow-xl active:scale-[0.99]"
+                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-start shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-400/50 hover:shadow-xl active:scale-[0.99]"
                         aria-label="Report fake medicine"
                     >
                         <div className="flex items-start justify-between gap-4">
                             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-red-50 text-red-600 ring-1 ring-white/60 transition-colors duration-300 ring-inset group-hover:bg-red-500 group-hover:text-white dark:bg-red-950/30 dark:text-red-400 dark:ring-white/10">
                                 <AlertTriangle size={28} strokeWidth={2.5} />
                             </div>
-                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-red-400" />
+                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-red-400 rtl:rotate-180" />
                         </div>
 
                         <div className="pt-4">
@@ -302,8 +302,8 @@ export default function SahiDawaHome() {
 
                 {/* ── AI Health Assistant CTA Banner ── */}
                 <div className="group relative mt-8 overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 shadow-md transition-all duration-300 hover:shadow-xl sm:p-8 md:p-10">
-                    <div className="pointer-events-none absolute -top-16 -right-16 h-64 w-64 rounded-full bg-purple-500/10 blur-3xl transition-transform duration-700 group-hover:scale-110" />
-                    <div className="pointer-events-none absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-blue-500/10 blur-3xl transition-transform duration-700 group-hover:scale-110" />
+                    <div className="pointer-events-none absolute -top-16 -end-16 h-64 w-64 rounded-full bg-purple-500/10 blur-3xl transition-transform duration-700 group-hover:scale-110" />
+                    <div className="pointer-events-none absolute -bottom-12 -start-12 h-48 w-48 rounded-full bg-blue-500/10 blur-3xl transition-transform duration-700 group-hover:scale-110" />
 
                     <div className="relative z-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
                         <div className="flex items-center gap-4 sm:gap-5">
@@ -339,7 +339,7 @@ export default function SahiDawaHome() {
                             Chat Now
                             <ChevronRight
                                 size={18}
-                                className="transition-transform duration-200 group-hover/btn:translate-x-1"
+                                className="transition-transform duration-200 group-hover/btn:translate-x-1 rtl:rotate-180"
                             />
                         </button>
                     </div>
@@ -372,7 +372,7 @@ export default function SahiDawaHome() {
                                                 key={i}
                                                 className="relative flex items-start gap-4 overflow-hidden rounded-2xl border border-(--color-border-muted) bg-(--color-surface-page) p-4 shadow-sm"
                                             >
-                                                <div className="absolute top-0 bottom-0 left-0 w-1.5 bg-(--color-border-muted)" />
+                                                <div className="absolute top-0 bottom-0 start-0 w-1.5 bg-(--color-border-muted)" />
                                                 <Skeleton className="h-10 w-10 shrink-0 rounded-full" />
                                                 <div className="flex-1 space-y-2">
                                                     <div className="flex items-start justify-between">
@@ -392,7 +392,7 @@ export default function SahiDawaHome() {
                                         >
                                             {/* Left edge colored strip */}
                                             <div
-                                                className={`absolute top-0 bottom-0 left-0 w-1.5 ${
+                                                className={`absolute top-0 bottom-0 start-0 w-1.5 ${
                                                     alert.brand_name === "SYSTEM_UPDATE"
                                                         ? "bg-blue-500"
                                                         : alert.cdsco_approval_status ===
@@ -469,7 +469,7 @@ export default function SahiDawaHome() {
                                     View Full Alert Log
                                     <ChevronRight
                                         size={16}
-                                        className="text-(--color-text-muted) transition-transform duration-200 group-hover/log:translate-x-1"
+                                        className="text-(--color-text-muted) transition-transform duration-200 group-hover/log:translate-x-1 rtl:rotate-180"
                                     />
                                 </button>
                             </Link>
@@ -483,7 +483,7 @@ export default function SahiDawaHome() {
 
             {/* ── Mobile Bottom Navigation ── */}
             <nav
-                className="fixed right-0 bottom-0 left-0 z-50 flex items-center justify-around border-t border-(--color-border-muted)/60 bg-(--color-surface-page)/90 px-2 py-3 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
+                className="fixed end-0 bottom-0 start-0 z-50 flex items-center justify-around border-t border-(--color-border-muted)/60 bg-(--color-surface-page)/90 px-2 py-3 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
                 aria-label="Mobile navigation"
             >
                 <Link
@@ -534,7 +534,7 @@ export default function SahiDawaHome() {
                 >
                     <div className="relative transition-transform group-hover:-translate-y-1">
                         <Bell size={24} strokeWidth={2} />
-                        <span className="absolute top-0 right-0.5 h-2 w-2 animate-pulse rounded-full border border-(--color-surface-page) bg-red-500"></span>
+                        <span className="absolute top-0 end-0.5 h-2 w-2 animate-pulse rounded-full border border-(--color-surface-page) bg-red-500"></span>
                     </div>
                     <span className={`${mobileNavLabelClassName} text-[11px] font-semibold`}>
                         Alerts

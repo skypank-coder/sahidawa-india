@@ -108,8 +108,8 @@ export default function Chatbot() {
                                 key={idx}
                                 className={`max-w-[85%] rounded-2xl p-3 shadow-sm ${
                                     msg.isBot
-                                        ? "self-start rounded-tl-sm border border-(--color-border-muted) bg-(--color-surface-page) text-(--color-text-primary)"
-                                        : "self-end rounded-tr-sm bg-green-600 text-white"
+                                        ? "self-start rounded-ss-sm border border-(--color-border-muted) bg-(--color-surface-page) text-(--color-text-primary)"
+                                        : "self-end rounded-se-sm bg-green-600 text-white"
                                 }`}
                             >
                                 <p className="text-sm leading-relaxed">{msg.text}</p>
@@ -133,7 +133,7 @@ export default function Chatbot() {
                             disabled={!input.trim()}
                             className="flex h-11 w-11 items-center justify-center rounded-full bg-green-600 p-3 text-white shadow-md transition-colors hover:bg-green-700 disabled:opacity-50"
                         >
-                            <Send size={18} className="relative right-[1px] bottom-[1px]" />
+                            <Send size={18} className="relative end-[1px] bottom-[1px]" />
                         </button>
                     </div>
                 </div>

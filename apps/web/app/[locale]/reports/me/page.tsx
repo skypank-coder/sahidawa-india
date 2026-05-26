@@ -107,7 +107,7 @@ function ReportCard({ report }: { report: MyReport }) {
 
     return (
         <Card className="flex flex-col sm:flex-row bg-(--color-surface-page) border-(--color-border-muted) shadow-sm overflow-hidden">
-            <div className="flex h-40 shrink-0 items-center justify-center bg-(--color-surface-muted) sm:h-32 sm:w-32 border-r border-(--color-border-muted)">
+            <div className="flex h-40 shrink-0 items-center justify-center bg-(--color-surface-muted) sm:h-32 sm:w-32 border-e border-(--color-border-muted)">
                 {isSafePhotoUrl(report.photo_url) ? (
                     <LazyImage
                         src={report.photo_url}

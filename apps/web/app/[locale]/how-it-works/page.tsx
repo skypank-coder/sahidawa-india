@@ -49,16 +49,16 @@ export default function HowItWorksPage() {
             {/* Hero Section */}
             <section className="relative px-6 pt-24 pb-20">
                 {/* Glow Effects */}
-                <div className="absolute top-10 left-0 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" />
-                <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+                <div className="absolute top-10 start-0 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" />
+                <div className="absolute end-0 bottom-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
                 <div className="relative mx-auto max-w-6xl text-center">
                     <Link
                         href="/"
                         aria-label="Back to Home"
-                        className="absolute top-6 left-6 flex h-12 w-12 items-center justify-center rounded-full bg-(--color-surface-muted) border border-(--color-border-muted) shadow-sm transition-all duration-300 hover:scale-105 hover:bg-(--color-border-muted)"
+                        className="absolute top-6 start-6 flex h-12 w-12 items-center justify-center rounded-full bg-(--color-surface-muted) border border-(--color-border-muted) shadow-sm transition-all duration-300 hover:scale-105 hover:bg-(--color-border-muted)"
                     >
-                        <ArrowLeft size={22} className="text-(--color-text-secondary)" />
+                        <ArrowLeft size={22} className="text-(--color-text-secondary) rtl:rotate-180" />
                     </Link>
                     <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/30 px-5 py-2 text-sm font-medium text-emerald-700 dark:text-emerald-400">
                         <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -115,8 +115,8 @@ export default function HowItWorksPage() {
                                 </div>
 
                                 {index !== 4 && (
-                                    <div className="absolute top-1/2 -right-5 z-10 hidden translate-x-1/2 -translate-y-1/2 text-emerald-400 md:block">
-                                        <ArrowRight size={24} />
+                                    <div className="absolute top-1/2 -end-5 z-10 hidden translate-x-1/2 -translate-y-1/2 text-emerald-400 md:block">
+                                        <ArrowRight size={24} className="rtl:rotate-180" />
                                     </div>
                                 )}
                             </div>

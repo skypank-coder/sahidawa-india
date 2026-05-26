@@ -57,7 +57,7 @@ export function OfflineBanner() {
             role="alert"
             aria-live="assertive"
             aria-atomic="true"
-            className={`fixed right-0 left-0 z-50 transition-all duration-300 ease-in-out ${isVisible || isTestMode ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} ${
+            className={`fixed end-0 start-0 z-50 transition-all duration-300 ease-in-out ${isVisible || isTestMode ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} ${
                 isCurrentlyOffline
                     ? "border-b-2 border-amber-600 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500"
                     : "border-b-2 border-emerald-600 bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-500"

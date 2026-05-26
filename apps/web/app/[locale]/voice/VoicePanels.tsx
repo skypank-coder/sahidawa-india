@@ -58,14 +58,14 @@ export function VoiceIntroPanel({
             </div>
 
             <div className="mx-auto grid max-w-sm grid-cols-2 gap-4">
-                <div className="rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page) p-4 text-left shadow-sm">
+                <div className="rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page) p-4 text-start shadow-sm">
                     <Mic size={20} aria-hidden="true" className="mb-2 text-blue-500" />
                     <p className="text-xs font-bold tracking-tighter text-(--color-text-muted) uppercase">
                         {exampleLabel}
                     </p>
                     <p className="mt-1 text-sm font-bold text-(--color-text-primary)">{exampleText}</p>
                 </div>
-                <div className="rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page) p-4 text-left shadow-sm">
+                <div className="rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page) p-4 text-start shadow-sm">
                     <Volume2 size={20} aria-hidden="true" className="mb-2 text-emerald-700 dark:text-emerald-400" />
                     <p className="text-xs font-bold tracking-tighter text-(--color-text-muted) uppercase">
                         {assistantLabel}
@@ -210,7 +210,7 @@ export function VoiceReviewPanel({
     return (
         <div className="animate-in fade-in slide-in-from-bottom-8 w-full max-w-md rounded-[2.5rem] border border-(--color-border-muted) bg-(--color-surface-page) p-8 shadow-xl duration-500 motion-reduce:animate-none">
             {showEmergency && (
-                <div className="mb-6 rounded-2xl border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/20 p-4 text-left">
+                <div className="mb-6 rounded-2xl border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/20 p-4 text-start">
                     <div className="flex items-start gap-3">
                         <AlertTriangle
                             className="mt-0.5 shrink-0 text-red-600 dark:text-red-400"
@@ -385,7 +385,7 @@ export function VoiceResultPanel({
 
             <div className="space-y-4">
                 {result.emergency && (
-                    <div className="rounded-2xl border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/20 p-4 text-left">
+                    <div className="rounded-2xl border border-red-200 dark:border-red-900 bg-red-50 dark:bg-red-950/20 p-4 text-start">
                         <div className="flex items-start gap-3">
                             <AlertTriangle
                                 className="mt-0.5 shrink-0 text-red-600 dark:text-red-400"

@@ -35,23 +35,23 @@ export default function MapLoading() {
                     }}
                 />
 
-                <div className="absolute top-1/3 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
+                <div className="absolute top-1/3 start-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
                     <div className="h-12 w-12 animate-pulse rounded-full border-4 border-white bg-emerald-200 shadow-lg" />
                     <div className="h-5 w-28 animate-pulse rounded-full bg-white/90 shadow" />
                 </div>
 
-                <div className="absolute top-1/2 right-1/4">
+                <div className="absolute top-1/2 end-1/4">
                     <div className="h-10 w-10 animate-pulse rounded-full border-4 border-white bg-blue-200 shadow-md" />
                 </div>
 
-                <div className="absolute bottom-1/4 left-1/4">
+                <div className="absolute bottom-1/4 start-1/4">
                     <div
                         className="h-10 w-10 animate-pulse rounded-full border-4 border-white bg-blue-200 shadow-md"
                         style={{ animationDelay: "300ms" }}
                     />
                 </div>
 
-                <div className="absolute top-4 right-4 flex flex-col gap-2">
+                <div className="absolute top-4 end-4 flex flex-col gap-2">
                     <div className="h-10 w-10 animate-pulse rounded-xl bg-white shadow-md" />
                     <div
                         className="h-10 w-10 animate-pulse rounded-xl bg-white shadow-md"
@@ -59,7 +59,7 @@ export default function MapLoading() {
                     />
                 </div>
 
-                <div className="absolute right-0 bottom-0 left-0 space-y-3 p-4">
+                <div className="absolute end-0 bottom-0 start-0 space-y-3 p-4">
                     {[0, 1, 2].map((i) => (
                         <div
                             key={i}

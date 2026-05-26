@@ -48,7 +48,7 @@ export default async function FullAlertsLogPage() {
                     href="/"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-(--color-text-secondary) transition-colors hover:text-(--color-text-primary)"
                 >
-                    <ArrowLeft size={16} />
+                    <ArrowLeft size={16} className="rtl:rotate-180" />
                     Back to Home Page
                 </Link>
 
@@ -106,7 +106,7 @@ export default async function FullAlertsLogPage() {
                             >
                                 {/* Left edge colored strip */}
                                 <div
-                                    className={`absolute top-0 bottom-0 left-0 w-1.5 ${
+                                    className={`absolute top-0 bottom-0 start-0 w-1.5 ${
                                         isSystem
                                             ? "bg-blue-500"
                                             : isCritical

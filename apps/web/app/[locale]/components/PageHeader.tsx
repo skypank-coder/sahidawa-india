@@ -29,7 +29,7 @@ export const PageHeader = ({
 
     return (
         <header
-            className={`no-print ${isDark ? "absolute top-0 right-0 left-0 bg-gradient-to-b from-black/70 to-transparent text-white" : "relative border-b border-(--color-border-muted) bg-(--color-surface-page) text-(--color-text-primary) shadow-sm"} z-50 flex flex-col gap-4 p-4`}
+            className={`no-print ${isDark ? "absolute top-0 end-0 start-0 bg-gradient-to-b from-black/70 to-transparent text-white" : "relative border-b border-(--color-border-muted) bg-(--color-surface-page) text-(--color-text-primary) shadow-sm"} z-50 flex flex-col gap-4 p-4`}
         >
             <div className="flex items-center justify-between gap-2">
                 <Link
@@ -44,7 +44,7 @@ export const PageHeader = ({
                     <ArrowLeft
                         size={24}
                         aria-hidden="true"
-                        className={isDark ? "text-white" : "text-(--color-text-secondary)"}
+                        className={`${isDark ? "text-white" : "text-(--color-text-secondary)"} rtl:rotate-180`}
                     />
                     <span className="sr-only">Go back</span>
                 </Link>
