@@ -1,18 +1,10 @@
 import logging
 import os
-import sys
 from contextlib import asynccontextmanager
-from pathlib import Path
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
-ml_root = Path(__file__).resolve().parent
-apps_root = ml_root.parent
-for path in (str(ml_root), str(apps_root)):
-    if path not in sys.path:
-        sys.path.insert(0, path)
 
 from apps.ml.src.image_compare import _load_reference_cache, router as image_compare_router
 from services.telemetry import configure_telemetry_logging
