@@ -182,7 +182,7 @@ def compare_medicine_image(request: CompareRequest) -> CompareResponse:
     )
 
 
-@router.get("/cache/reload")
+@router.get("/api/v1/cache/reload")
 def reload_cache() -> dict:
     _load_reference_cache()
     return {"cached_references": len(_reference_cache), "status": "reloaded"}
